@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>One World One Family</title>
+<link rel="stylesheet" href="styles.css">
+
+<link rel="icon" href="Images/VSS_Logo.ico" type="image/png">
+
+
+
+<style>
+
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background-image: url('Images/bg.jpg');
+color:#333;
+line-height:1.7;
+}
+
+/* HEADER */
+
+header{
+background-color: lemonchiffon;
+color: green;
+display: flex;
+align-items:center;
+padding:15px 25px;
+}
+
+header img{
+height:55px;
+margin-right:15px;
+}
+
+/* HORIZONTAL NAV */
+
+.topnav{
+background:#064d1a;
+}
+
+.topnav ul{
+list-style:none;
+display:flex;
+justify-content:center;
+margin:0;
+padding:0;
+}
+
+.topnav li{
+margin:0;
+}
+
+.topnav a{
+display:block;
+padding:14px 18px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.topnav a:hover{
+background:#03350f;
+}
+
+/* PAGE LAYOUT */
+
+.container{
+display: flex;
+}
+#slide {
+            width: 260px;
+            height: 260px;;
+            border: 2px solid black;
+        }
+        
+#caption {
+            display: flex;
+            font-weight: bold;;
+        }
+img {
+    display: auto;
+}   
+
+/* SIDEBAR */
+
+.sidebar{
+width: 300px;
+background:#eaf5ea;
+padding:20px;
+}
+
+.sidebar h3{
+color:#0b6623;
+margin-top:20px;
+}
+
+.sidebar ul{
+list-style:none;
+padding:0;
+}
+
+.sidebar li{
+margin: left 0;;
+}
+
+.sidebar a{
+text-decoration:none;
+color:#064d1a;
+}
+
+.sidebar a:hover{
+text-decoration:underline;
+}
+
+/* CONTENT */
+
+.content{
+flex:1;
+padding:30px;
+}
+
+.slogan{
+text-align:center;
+font-size:20px;
+font-weight:bold;
+margin-bottom:25px;
+color:#0b6623;
+}
+
+.section{
+background: transparent;
+padding: 5px;
+margin-bottom:25px;
+border-radius:6px;
+color: yellow;
+}
+
+h2{
+color: yellow;
+}
+
+ul{
+margin-left:20px;
+}
+
+/* FOOTER */
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+.login-box {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+.login-box form {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.login-box input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.login-box button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+</style>
+
+</head>
+
+
+<body>
+
+<header>
+<img src="images/VSS Logo.jpeg" alt="Logo">
+<h1>Vasudhaiva Sthiti Samaj</h1>
+</header>
+
+<div id="loginBox" class="login-box">
+  <form onsubmit="return loginUser()">
+    <h3>User Login</h3>
+    <input type="text" placeholder="Username" id="username" required>
+    <input type="password" placeholder="Password" id="password" required>
+    <button type="submit">Login</button>
+    <button type="button" onclick="closeLogin()">Close</button>
+    <p id="message"></p>
+  </form>
+</div>
+
+<!-- HORIZONTAL NAVIGATION -->
+
+<nav class="topnav">
+
+<ul>
+<li style="float:right">
+  <a href="#" onclick="openLogin()">Login</a>
+</li>
+<li><a href="#">Home</a></li>
+<li><a href="#">GreenCity</a></li>
+<li><a href="#">AAARIWS</a></li>
+<li><a href="#">Commitments</a></li>
+<li><a href="#">Stakeholders</a></li>
+<li><a href="#">Land Bank</a></li>
+<li><a href="#">Work for All</a></li>
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+</nav>
+
+
+<div class="container">
+
+
+<!-- LEFT SIDEBAR -->
+
+<aside class="sidebar">
+
+<h3>AAARIWS</h3>
+
+<ul>
+<li><a href="#">Agriculture</a></li>
+<li><a href="#">Animal Husbandry</a></li>
+<li><a href="#">Aquaculture</a></li>
+<li><a href="#">Renewable Energy</a></li>
+<li><a href="#">Infrastructure Construction Automation</a></li>
+<li><a href="#">Waste to Energy Economics</a></li>
+<li><a href="#">Skill Development</a></li>
+</ul>
+
+<h3>Commitments</h3>
+
+<ul>
+<li><a href="#">Sustainability First</a></li>
+<li><a href="#">Work for All</a></li>
+<li><a href="#">Health for All</a></li>
+<li><a href="#">Education for All</a></li>
+<li><a href="#">Equality for All</a></li>
+<li><a href="#">Cultural Unity</a></li>
+</ul>
+
+<h3>Stakeholders</h3>
+
+<ul>
+<li><a href="#">Primary Members</a></li>
+<li><a href="#">Executive Members</a></li>
+<li><a href="#">General Members</a></li>
+<li><a href="#">Investor Members</a></li>
+<li><a href="#">Corporate Members</a></li>
+</ul>
+<ul>
+   <div class="slideshow">
+        <img id="slide" src="Images/Sustainable Agriculture.jpeg">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+  var images = [
+  "Images/Sustainable Agriculture.jpeg",
+  "Images/Animal Husbandry.jpg",
+  "Images/Acquaculture.jpg",
+  "Images/Renewable Energy.jpg",
+  "Images/Sustainable Retreat.jpg",
+  "Images/Waste to Energy.jpg",
+  "Images/Skill Development.jpg"
+];
+var names= [
+  "Agriculture",
+  "Livestock",
+  "Aquaculture",
+  "Renewables",
+  "Infrastructure",
+  "Energy",
+  "Skill"
+];
+
+var i=0;
+
+function changeImage() {
+  document.getElementById("slide").src= images[i];
+  document.getElementById("caption").innerText=names[i];
+  i++;
+  if(i >= images.length){
+    i=0;
+  }
+        }
+        setInterval(changeImage, 2000);
+    
+        
+    </script> 
+</ul>
+
+
+<h3>GreenCity Financials</h3>
+<ul>
+<li><a href="#">Panchayats</a></li>
+<li><a href="#">District Administration</a></li>
+<li><a href="#">Financial Institutions</a></li>
+<li><a href="#">Bankers</a></li>
+<li><a href="#">Insurance Companies</a></li>
+</ul>
+
+<h3>Greencity Commercials</h3>
+<ul>
+<li><a href="#">Individual Investors</a></li>
+<li><a href="#">Corporate Members</a></li>
+<li><a href="#">Institutions</a></li>
+<li><a href="#">Enterprises</a></li>
+<li><a href="#">Marketing Organisations</a></li>   
+</ul>
+
+<h3>Greencity Returns</h3>
+<ul>
+<li><a href="#">Agricultural Produce</a></li>
+<li><a href="#">Aquaculture Produce</a></li>
+<li><a href="#">Livestock Products</a></li>
+<li><a href="#">Energy Products</a></li>
+<li><a href="#">Infrastructure Projects</a></li> 
+<li><a href="#">Waste-derived products</a></li>
+<li><a href="#">Human Capital Development</a></li>   
+</ul>
+<ul>
+    <img src="Images/GreenCIty.jpg" alt="GreenCity" usemap="#workmap" width="100%">
+
+<map name="workmap">
+
+<area shape="circle" coords="158,44,37" alt="Animal Husbandry" href="https://www.shutterstock.com/search/sustainable-animal-production">
+
+<area shape="circle" coords="251,92,38" alt="Aquaculture" href="https://www.freepik.com/free-photos-vectors/sustainable-aquaculture">
+
+<area shape="circle" coords="262,196,37" alt="Renewable Energy" href="https://www.shutterstock.com/search/renewable-energy">
+
+<area shape="circle" coords="201,256,35" alt="Retreat Centre" href="https://www.makemytrip.com/hotels/photos-of-eagle_nest_eco_retreat-details-manas.html">
+
+<area shape="circle" coords="114,259,39" alt="Waste to Energy" href=" https://www.freepik.com/free-vector/circular-economy-environment-care-recycling-waste_159553217.htm#fromView=keyword&page=1&position=0&uuid=af3de1ed-b7db-4486-a92e-c26656c23674&query=Waste+to+energy">
+
+<area shape="circle" coords="55,194,38"  alt="Skill Development" href=" https://www.csdindia.in/">
+
+<area shape="circle" coords="66,89,36" alt="Agriculture" href="https://www.escoffier.edu/blog/culinary-arts/the-difference-between-organic-and-sustainable-agriculture/">
+
+</map>
+</ul>
+
+<h3>GreenCity Publicaitons</h3>
+
+<ul>
+<li><a href="#">Memorandum</a></li>
+<li><a href="#">Annual Report</a></li>
+<li><a href="#">Annual Budget</a></li>
+<li><a href="#">Quaterly Programs</a></li>
+<li><a href="#">Achievements</a></li>
+<li><a href="#">Winners and Awards</a></li>
+<li><a href="#">Board Meeting & Resolutions</a></li>
+</ul>
+
+<h3>Notice Board</h3>
+<div class="notice-board">
+<div class="notice-content">
+<marquee direction="up" scrollamount="2" height="150">
+<ul>
+<li style="background-color: red;": red;">GreenCity pilot project launching soon</li>
+<li>Investor Member Registrations Open</li>
+<li style="background-color:blue;">Training Program on Sustainable Agriculture- July</li>
+<li>Volunteers required for Skill Development Programs</li>
+<li style="background-color:green">Stakeholders Meeting scheduled next Month</li>
+</ul>
+</marquee>
+</div>
+</div>
+<h3>GreenCity Video</h3>
+
+<div class="youtube-box">
+<iframe 
+width="100%" 
+height="180"
+src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+</div>
+</aside>
+
+
+<!-- MAIN CONTENT -->
+
+<div class="content">
+
+<div class="slogan">
+One world One Family: Prosperity through Sustainability
+</div>
+
+
+<div class="section">
+
+<h2>Foundational Principles of GreenCity</h2>
+
+<p>Since time immemorial, human beings have coexisted in accordance with the fundamental principles of Creation or Expansion, Preservation, and Transformation. These principles are symbolically represented in our Vedic culture by Brahma (Creation), Vishnu (Preservation), and Shiva (Transformation). This age-old framework has guided harmonious living not just among humans, but within the broader context of the natural world.</p>
+
+<p>In recent times, however, this delicate coexistence has been disrupted. The relentless drive for expansion has reached its natural limits, leading to a collapse in biodiversity, acute water scarcity, widespread pollution, and economic challenges such as the rising cost of essential resources. These issues are further compounded by increasing climate-related disasters and migration pressures, all of which underscore the urgent need to reimagine our model of living toward one that restores balance, upholds justice, and nurtures fraternity among all beings.</p>
+
+<p>At the heart of the GreenCity concept lies a core belief: the existence of all life on Earth—human, animal, plant, and soil—is possible only when all beings coexist as a single family in harmony with nature. This foundational philosophy is enshrined in our Vedic culture through the maxim “One World One Family: Vasudhaiva Kutumbakam.” The GreenCity initiative draws inspiration from this ancient wisdom, seeking to foster a model of sustainable living that honours interconnectedness and collective well-being.</p>
+
+</div>
+
+
+<div class="section">
+
+<h2>Principles of VSS GreenCity & Technological Advancement</h2>
+
+<p>The GreenCity initiative is envisioned as a strategic solution to the environmental irregularities and inequalities that have emerged around urban centres. By situating GreenCity on the outskirts of these existing urban areas, the project creates a buffer zone that balances urban opulence with the needs of destitute green spaces.</p>
+
+<p>The approach centres on the implementation of sustainable activities in peripheral localities, leveraging a variety of targeted initiatives. The model utilises advanced technologies including Artificial Intelligence (AI) and the Internet of Things (IoT), Infrastructure Automation ensuring sustainability efforts remain effective and innovative.</p>
+
+</div>
+
+
+<div class="section">
+
+<h2>VSS GreenCity as a Living Organism</h2>
+
+<p>The VSS GreenCity concept is envisioned as a living organism—a sustainable satellite ecosystem designed to absorb the overflow from urban centres while empowering adjacent rural landscapes.</p>
+
+<p>Within this ecosystem, IoT functions as the organism’s eyes and ears collecting environmental data, while Artificial Intelligence acts as the brain enabling informed decision-making and optimisation of sustainabiliy practices.</p>
+
+<p>Crucially, the stakeholders of VSS GreenCity play the role of its heart, extending support through their hands and hopes for crrying forward initiative with genuine committment and collective effort. Their involvement ensures the sustained vitality and success of this balanced ecosystem.</p>
+</div>
+
+
+<div class="section">
+
+<h2>GreenCity – A Satellite Ecosystem</h2>
+
+<p>GreenCity, also referred to as a Satellite Buffer Captive City, is a self-sustaining, zero-waste ecosystem designed to function independently while positively influencing surrounding environments. It thrives on self-creation, continuous expansion, environmental preservation, and socio-economic transformation of its neighbouring regions- namely the Urban Elite City and the Remote Rural Greens. Through adaptive integration, GreenCity establishes a family-clustered model that enables development at state, national and international levels.</p>
+
+<p>The GreenCity ecosystem is structured around seven strategic anchors A-A-A-R-I-W-S, each contributing to sustainability, resilience and inclusive growth.</p>
+
+</div>
+
+
+<div class="section">
+
+<h2>Seven Strategic Anchors (AAARIWS)</h2>
+
+<ul>
+<h3>Agriculture</h3>
+<li>Agriculture in GreenCity is centered on sustainable, regenerative, and technology-enabled practices. Emphasis is placed on organic cultivation, precision farming, vertical agriculture, and climate resilient crops to ensure food security while preserving soil health and biodiversity. Smart Irrigation systems, crop rotation, and local seed preservation reduce dependency on external inputs and minimise environmental impact. This anchor not only feed the population but also generates livilihood and supports agri-based chains within the ecosystem.</li>
+<h3>Animal Husbandry</h3>
+<li>Animal Husbandry plays a vital role in maintaining nutritional balance, rural employment, and ecological harmony. GreenCity promotes ethical and scientific livestock management, including diary farming, poultry, and indegenous breed conservation. Integrated farming systems allow animal waste to be reused as organic manure and biogas feedstock, thereby supporting circular economy principles. Veterinary care, fodder development and cooperative models enhance productivity while ensuring animal welfare and farmer prosperity.</li>
+<h3>Aquaculture</h3>
+<li>Aquaculture within GreenCity focuses on sustainable fish and aquatic organism production using eco-friendly methods. Controlled pond systems, biofloc technology, and integrated rice-fish farming optimize water usage and enhance protein availability. Aquaculture contributes to food security, income diversification, and employment generation, particularly for rural and semi urban populations, while maintaining aquatic ecosystem balance.</li>
+<h3>Renewable Energy</h3>
+<li>Renewable Energy is a foundational pillar of GreenCity, enabling energy independence and carbon neutrality.Solar, Wind, biomass, and biogas are deployed to meet agricultural, and industrial energy demands. Decentralised micro-grids and smart energy storage solutions ensure reliability and efficiency. This anchor significantly reduces fossil fuel dependence and positions GreenCity as a model for clean energy transition.</li>
+<h3>Infrastructure Automation</h3>
+<li>Infrastructure COnstruciton Automation integrates advanced technologies such as prefabrication, robotics,AI-assisted planning and smart materials to develop resilient and energy efficient infrastructure. AUtomated construction reduces material waste, shotens project timelines, and improves safety and quality. Sustainable building designs, green architecture, and smart mobility systems ensure that infrastructure growth aligns with environmental and social goals.</li>
+<h3>Waste to Energy Economics</h3>
+<li>Waste to Energy Economics transforms municipal, agricultural, and insdustrial waste into valuable energy and resources.</li>
+<h3>Skill Development</h3>
+<li>SKill Development acts as the human capital backbone of GreenCity. Targeted training programs focus on green jobs, agri-technology, renewable energy systems, automation, waste management, and entrepreneurship. By aligning skills with ecosystem needs, GreenCity empowers youth, women, and local communities, ensuring inclusive participation in economic growth and long-term sustainability.</li>
+<h3>Conclusion</h3>
+<li>Together, these seven anchors form an interconnected, circular, and resilient ecosystem, positioning GreenCity as a replicable model for sustainable urban-rural integration and future-ready development.</li>
+</ul>
+
+</div>
+
+
+<div class="section">
+
+<h2>GreenCity Commitments</h2>
+<p>GreenCity is deeply committed to advancing its vision of "One World, One Family" by working collaborately with its anchors and stakeholders. Guided by this conviction, GreenCity upholds the following core committments:</p>
+<ul>
+<h3>Sustainability First</h3>
+<li>Promoting responsible growth that protects the environment for future generations.</li>
+<h3>Work for All</h3>
+<li>Creating inclusive oppertunities for dignified and meaningful livlihoods.</li>
+<h3>Health for All</h3>
+<li>Ensuring access to quality healthcare and promoting overall wellbeing.</li>
+<h3>Education for All</h3>
+<li>Empowering individuals through equitable and lifelong learning.</li>
+<h3>Equality for All</h3>
+<li>Upholding fairness, dignity, and equal rights for every individual.</li>
+<h3>Cultural Unity</h3>
+<li>Celebrating diversity while fostering harmony and shared values.</li>
+</ul>
+
+</div>
+
+
+<div class="section">
+
+<h2>Stakeholders: The Heart of VSS GreenCity</h2>
+<p>The stakeholders of VSS GreenCity are integral to its functioning, empowering the role of the ecosystem's heart. Through their active participation, they extend support with both their hands and hopes, ensuring the initiative is carried forward with genuine commitment and a spitrit of collective effort. This involvement is not merely symbolic; it forms the basis for the sustained vitality and long-term success of the balanced ecosystem envisioned by the GreenCity concept.</p>
+<p>By nurturin ghte project with unwavering dedication, stakeholes guarantee the harmony between urban and rural environments is maintained. Their continuous engagement and support underpin the effectiveness and resilience of the GreenCity model, making it possible for sustainable practices to thrive.</p>
+<ul>
+<h3>Primary Members</h3>
+<li>These include the local inhabitants and landowners who form the backbone of GreenCity. They contribute by creating a LandBank to support GreeCity's anchor activities and may share their land on a short-term or long-term basis for approved initiatives.</li>
+<h3>Executive Members</h3>
+<li>These comprise representatives from local Government, ex-officio, and local governance bodies. Their role is to facilitate policy support, provide statutory approvals, and oversee the implementation of activities undertaken thrugh GreenCity anchors.</li>
+<h3>General Members</h3>
+<li>These members include Self Help Groups(SHGs) and the local workforce responsible for implementing GreenCity strategies at the field level. They are also accountable for the maintenance, upkeep, and value addition of products until final sale.</li>
+<h3>Investor Members</h3>
+<li>These are individuals from anywhere in India who partner with the society at the local level by making investments. Returns to Investors are provided exclusively in terms of goods and services, in line with the society's objectives.</li>
+<h3>Corporate Members</h3>
+<li>Corporate members act as strategic partners and donor organisations, supporting the implementation of Corporate Social Responsibility (CSR) initiatives through the society's anchor projects.</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+
+<footer>
+
+© 2026 VSS GreenCity | One World One Family
+
+</footer>
+
+<script src="script.js"></script>
+<script>
+  function openLogin() {
+    document.getElementById("loginBox").style.display = "block";
+  }
+
+  function closeLogin() {
+    document.getElementById("loginBox").style.display = "none";
+  }
+  // The loginUser function is assumed to be in script.js
+  // It should handle the login logic and return false to prevent form submission.
+</script>
+</body>
+
+</html>

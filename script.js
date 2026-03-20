@@ -59,7 +59,7 @@ function registerUser() {
     const passwordInput = document.getElementById("reg-password").value;
     
     // Get the element where we will show messages (reusing the existing message element)
-    const messageDisplay = document.getElementById("reg-message");
+    const messageDisplay = document.getElementById("message");
     
     if (usernameInput === "" || passwordInput === "") {
         messageDisplay.style.color = "red";
@@ -92,3 +92,4 @@ function closeLogin() {
     document.getElementById("username").value = "";
     document.getElementById("password").value = "";
 }
+

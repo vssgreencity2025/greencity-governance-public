@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Name Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+        input {
+            padding: 8px;
+            width: 250px;
+            margin-top: 5px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Enter Your Name</h2>
+
+<form id="nameForm">
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" maxlength="30" pattern="[A-Za-z]+" required>
+    <div id="fnameError" class="error"></div>
+
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" maxlength="30" pattern="[A-Za-z]+" required>
+    <div id="lnameError" class="error"></div>
+
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+document.getElementById("nameForm").addEventListener("submit", function(event) {
+    let fname = document.getElementById("fname").value;
+    let lname = document.getElementById("lname").value;
+
+    let namePattern = /^[A-Za-z]+$/;
+    let valid = true;
+
+    // First name validation
+    if (!namePattern.test(fname)) {
+        document.getElementById("fnameError").textContent = "Only letters allowed (A-Z, a-z)";
+        valid = false;
+    } else {
+        document.getElementById("fnameError").textContent = "";
+    }
+
+    // Last name validation
+    if (!namePattern.test(lname)) {
+        document.getElementById("lnameError").textContent = "Only letters allowed (A-Z, a-z)";
+        valid = false;
+    } else {
+        document.getElementById("lnameError").textContent = "";
+    }
+
+    if (!valid) {
+        event.preventDefault();
+    }
+});
+</script>
+
+</body>
+</html>
